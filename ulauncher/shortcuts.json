@@ -1,0 +1,82 @@
+{
+    "2636bc34-4927-4ec6-8a02-b07062615398": {
+        "id": "2636bc34-4927-4ec6-8a02-b07062615398",
+        "name": "ChatGPT",
+        "keyword": "gpt",
+        "cmd": "#!/usr/bin/env python3\nimport sys\nimport subprocess\nimport urllib.parse\n\ndef main():\n    # Get the query from command line arguments\n    if len(sys.argv) < 2:\n        # If no query, just open ChatGPT\n        url = \"https://chat.openai.com/\"\n    else:\n        # Combine all arguments after the script name as the query\n        query = \" \".join(sys.argv[1:])\n        \n        # URL encode the query\n        encoded_query = urllib.parse.quote_plus(query)\n        \n        # Create the ChatGPT URL\n        # Note: ChatGPT doesn't currently support direct query parameters,\n        # but this structure may work in the future or with browser extensions\n        url = f\"https://chat.openai.com/?q={encoded_query}\"\n    \n    # Open the URL in Brave\n    try:\n        subprocess.Popen([\"brave-browser\", url])\n    except FileNotFoundError:\n        # Try alternate executable names for Brave\n        try:\n            subprocess.Popen([\"brave\", url])\n        except FileNotFoundError:\n            print(\"Error: Brave browser not found. Please ensure it is installed and in your PATH.\")\n            sys.exit(1)\n\nif __name__ == \"__main__\":\n    main()",
+        "icon": "~/Pictures/ChatGPT_800x800.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1729366708.2703357
+    },
+    "14a5598d-1d87-476a-857e-aafea46eafc4": {
+        "id": "14a5598d-1d87-476a-857e-aafea46eafc4",
+        "name": "Google",
+        "keyword": "g",
+        "cmd": "#!/usr/bin/env python3\nimport sys\nimport subprocess\nimport urllib.parse\n\ndef main():\n    # Get the query from command line arguments\n    if len(sys.argv) < 2:\n        print(\"Usage: python google_brave.py <search query>\")\n        sys.exit(1)\n    \n    # Combine all arguments after the script name as the query\n    query = \" \".join(sys.argv[1:])\n    \n    # URL encode the query\n    encoded_query = urllib.parse.quote_plus(query)\n    \n    # Create the Google search URL\n    url = f\"https://www.google.com/search?q={encoded_query}\"\n    \n    # Open the URL in Brave\n    try:\n        subprocess.Popen([\"brave-browser\", url])\n    except FileNotFoundError:\n        # Try alternate executable names for Brave\n        try:\n            subprocess.Popen([\"brave\", url])\n        except FileNotFoundError:\n            print(\"Error: Brave browser not found. Please ensure it is installed and in your PATH.\")\n            sys.exit(1)\n\nif __name__ == \"__main__\":\n    main()",
+        "icon": "~/Pictures/Google__G__logo.svg.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1729367264.826911
+    },
+    "d06888a5-43ad-4a80-8be8-1dea7078502b": {
+        "id": "d06888a5-43ad-4a80-8be8-1dea7078502b",
+        "name": "Google Images",
+        "keyword": "img",
+        "cmd": "#!/usr/bin/env python3\nimport sys\nimport subprocess\nimport urllib.parse\n\ndef main():\n    # Get the query from command line arguments\n    if len(sys.argv) < 2:\n        print(\"Usage: python google_images_brave.py <search query>\")\n        sys.exit(1)\n    \n    # Combine all arguments after the script name as the query\n    query = \" \".join(sys.argv[1:])\n    \n    # URL encode the query\n    encoded_query = urllib.parse.quote_plus(query)\n    \n    # Create the Google Images search URL\n    url = f\"https://www.google.com/search?q={encoded_query}&udm=2\"\n    \n    # Open the URL in Brave\n    try:\n        subprocess.Popen([\"brave-browser\", url])\n    except FileNotFoundError:\n        # Try alternate executable names for Brave\n        try:\n            subprocess.Popen([\"brave\", url])\n        except FileNotFoundError:\n            print(\"Error: Brave browser not found. Please ensure it is installed and in your PATH.\")\n            sys.exit(1)\n\nif __name__ == \"__main__\":\n    main()",
+        "icon": "~/Pictures/Google_Lens_Icon.svg.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1729367492.459679
+    },
+    "5cd25b17-0779-4d57-84f3-ef70d4cb40a0": {
+        "id": "5cd25b17-0779-4d57-84f3-ef70d4cb40a0",
+        "name": "Youtube",
+        "keyword": "yt",
+        "cmd": "#!/usr/bin/env python3\nimport sys\nimport subprocess\nimport urllib.parse\n\ndef main():\n    # Get the query from command line arguments\n    if len(sys.argv) < 2:\n        print(\"Usage: python youtube_brave.py <search query>\")\n        sys.exit(1)\n    \n    # Combine all arguments after the script name as the query\n    query = \" \".join(sys.argv[1:])\n    \n    # URL encode the query\n    encoded_query = urllib.parse.quote_plus(query)\n    \n    # Create the YouTube search URL\n    url = f\"https://www.youtube.com/results?search_query={encoded_query}\"\n    \n    # Open the URL in Brave\n    try:\n        subprocess.Popen([\"brave-browser\", url])\n    except FileNotFoundError:\n        # Try alternate executable names for Brave\n        try:\n            subprocess.Popen([\"brave\", url])\n        except FileNotFoundError:\n            print(\"Error: Brave browser not found. Please ensure it is installed and in your PATH.\")\n            sys.exit(1)\n\nif __name__ == \"__main__\":\n    main()",
+        "icon": "~/Downloads/icons8-youtube-48.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1729368406.819844
+    },
+    "b1f2b08c-7bfa-4037-be2c-b2338a0dc417": {
+        "id": "b1f2b08c-7bfa-4037-be2c-b2338a0dc417",
+        "name": "Claude",
+        "keyword": "c",
+        "cmd": "#!/usr/bin/env python3\nimport sys\nimport subprocess\nimport urllib.parse\n\ndef main():\n    # Get the query from command line arguments\n    if len(sys.argv) < 2:\n        # If no query, just open Claude\n        url = \"https://claude.ai/new\"\n        print(\"Opening Claude\")\n    else:\n        # Combine all arguments after the script name as the query\n        query = \" \".join(sys.argv[1:])\n        \n        # Print the query - this is critical\n        print(query)\n        \n        # URL encode the query\n        encoded_query = urllib.parse.quote_plus(query)\n        \n        # Create the Claude URL\n        url = f\"https://claude.ai/new?q={encoded_query}\"\n    \n    # Open the URL in Brave\n    try:\n        subprocess.Popen([\"brave-browser\", url])\n    except FileNotFoundError:\n        # Try alternate executable names for Brave\n        try:\n            subprocess.Popen([\"brave\", url])\n        except FileNotFoundError:\n            print(\"Error: Brave browser not found. Please ensure it is installed and in your PATH.\")\n            sys.exit(1)\n\n# Don't use if __name__ == \"__main__\" check at all\n# Just call main directly so it always runs\nquery_result = main()",
+        "icon": "~/Pictures/claude-ai-square-1.svg",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1729440072.618959
+    },
+    "a340448e-28ca-4649-b2b1-1a56cf1f496e": {
+        "id": "a340448e-28ca-4649-b2b1-1a56cf1f496e",
+        "name": "DuckDuckGo",
+        "keyword": "ddg",
+        "cmd": "#!/usr/bin/env python3\nimport sys\nimport subprocess\nimport urllib.parse\n\ndef main():\n    # Get the query from command line arguments\n    if len(sys.argv) < 2:\n        print(\"Usage: python ddg_brave.py <search query>\")\n        sys.exit(1)\n    \n    # Combine all arguments after the script name as the query\n    query = \" \".join(sys.argv[1:])\n    \n    # URL encode the query\n    encoded_query = urllib.parse.quote_plus(query)\n    \n    # Create the DuckDuckGo search URL\n    url = f\"https://duckduckgo.com/?q={encoded_query}\"\n    \n    # Open the URL in Brave\n    try:\n        subprocess.Popen([\"brave-browser\", url])\n    except FileNotFoundError:\n        # Try alternate executable names for Brave\n        try:\n            subprocess.Popen([\"brave\", url])\n        except FileNotFoundError:\n            print(\"Error: Brave browser not found. Please ensure it is installed and in your PATH.\")\n            sys.exit(1)\n\nif __name__ == \"__main__\":\n    main()",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1741371929.5854292
+    },
+    "0f757c76-4f21-46fa-8ae6-4e509d1c4139": {
+        "id": "0f757c76-4f21-46fa-8ae6-4e509d1c4139",
+        "name": "Define",
+        "keyword": "def",
+        "cmd": "#!/usr/bin/env python3\nimport sys\nimport subprocess\nimport urllib.parse\n\ndef main():\n    # Get the query from command line arguments\n    if len(sys.argv) < 2:\n        print(\"Usage: python ddg_brave.py <search query>\")\n        sys.exit(1)\n    \n    # Combine all arguments after the script name as the query\n    query = \" \".join(sys.argv[1:])\n    \n    # URL encode the query\n    encoded_query = urllib.parse.quote_plus(query)\n    \n    # Create the DuckDuckGo search URL\n    url = f\"https://duckduckgo.com/?q=define {encoded_query}\"\n    \n    # Open the URL in Brave\n    try:\n        subprocess.Popen([\"brave-browser\", url])\n    except FileNotFoundError:\n        # Try alternate executable names for Brave\n        try:\n            subprocess.Popen([\"brave\", url])\n        except FileNotFoundError:\n            print(\"Error: Brave browser not found. Please ensure it is installed and in your PATH.\")\n            sys.exit(1)\n\nif __name__ == \"__main__\":\n    main()",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1741372560.7586486
+    },
+    "14e8ba54-4ac0-41fb-9400-80d0e12ba5fb": {
+        "id": "14e8ba54-4ac0-41fb-9400-80d0e12ba5fb",
+        "name": "Terminal",
+        "keyword": ">",
+        "cmd": "#!/usr/bin/env node\n\n/**\n * ULauncher Kitty Command Runner\n * \n * This script takes a command from ULauncher and runs it in Kitty terminal.\n * \n * Usage in ULauncher:\n * - Create a new extension with this script\n * - Set a keyword (e.g., \"k\")\n * - Type: k [your command]\n */\n\nconst { spawn } = require('child_process');\n\n// Get the command from ULauncher query\n// process.argv[0] is 'node'\n// process.argv[1] is the script path\n// process.argv[2] and beyond are the arguments passed from ULauncher\nconst args = process.argv.slice(2);\nconst command = args.join(' ');\n\nif (!command) {\n  console.log('No command provided');\n  process.exit(0);\n}\n\n// Launch kitty with the command\ntry {\n  // Using --class to give a specific class name for window managers\n  // Launch kitty and keep it open after command execution\n  spawn('kitty', [\n    '--class', 'ulauncher-command',\n    '-e', 'bash', '-c', `${command}; exec bash`\n  ], {\n    detached: true,\n    stdio: 'ignore'\n  }).unref();\n  \n  console.log(`Executing in kitty: ${command}`);\n} catch (error) {\n  console.error(`Error launching kitty: ${error.message}`);\n}",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1741466707.0954134
+    }
+}

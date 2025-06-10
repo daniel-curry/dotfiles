@@ -1,0 +1,44 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["custom/spotify"],
+    "modules-right": ["custom/keyboard", "network", "battery","pulseaudio", "custom/power", "custom/notification"],
+    "modules-center": ["clock"],
+    "clock": {
+        "format": "{:%I:%M %p   -   %B %d, %Y}",
+        "tooltip": false
+    }, 
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": " ", //{essid}",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "",
+        "tooltip-format-wifi": "{signalStrength}%",
+        "max-length": 20
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+    "custom/spotify": {
+    "format": " {}",
+    "max-length": 70,
+    "exec": "~/.config/waybar/mediaplayer.sh",
+    "exec-if": "pgrep spotify",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+    }
+}
