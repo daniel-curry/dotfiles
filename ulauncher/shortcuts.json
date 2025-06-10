@@ -78,5 +78,25 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1741466707.0954134
+    },
+    "5b3e4fd8-9734-43a6-8565-476d9d5b10ca": {
+        "id": "5b3e4fd8-9734-43a6-8565-476d9d5b10ca",
+        "name": "Shutdown",
+        "keyword": "s",
+        "cmd": "shutdown now",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1749527812.4928803
+    },
+    "4679bb8a-b7a4-4ee1-9cfa-3a940b41f72f": {
+        "id": "4679bb8a-b7a4-4ee1-9cfa-3a940b41f72f",
+        "name": "Restart",
+        "keyword": "r",
+        "cmd": "shudown -r now",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1749527826.1823347
     }
 }
