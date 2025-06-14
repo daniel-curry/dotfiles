@@ -93,7 +93,7 @@
         "id": "4679bb8a-b7a4-4ee1-9cfa-3a940b41f72f",
         "name": "Restart",
         "keyword": "r",
-        "cmd": "shudown -r now",
+        "cmd": "shutdown -r now",
         "icon": null,
         "is_default_search": false,
         "run_without_argument": true,
