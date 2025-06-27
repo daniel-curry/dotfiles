@@ -13,3 +13,5 @@ vim.o.timeoutlen = 300  -- or 200 ms
 
 -- Faster entry into window mode
 map("n", "<leader>w", "<C-w>", { noremap = true })
+
+

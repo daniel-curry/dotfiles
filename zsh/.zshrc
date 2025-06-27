@@ -5,6 +5,10 @@ source ~/.zsh_plugins.zsh
 
 PROMPT='%B%F{cyan}%n%f %F{blue}%~%b%f $ '
 
+# Source sensitive variables (if ~/.zsh_secrets exists)
+[[ -f "$HOME/.zsh_secrets" ]] && source "$HOME/.zsh_secrets"
+
+
 # Aliases
 alias update='sudo pacman -Syu && yay -Syu'
 
