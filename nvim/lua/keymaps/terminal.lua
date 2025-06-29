@@ -23,6 +23,7 @@ local function run_file()
       javascript = "node %",
       typescript = "ts-node %",
       sh     = "bash %",
+      rust   = "rustc " .. file .. " && ./" .. file_noext
     }
     cmd = runners[filetype]
     if cmd then
