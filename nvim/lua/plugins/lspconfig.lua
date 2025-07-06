@@ -22,6 +22,15 @@ return {
       },
     })
 
+    vim.diagnostic.config({
+        virtual_text = true,
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+        severity_sort = true,
+    })
     -- Add other LSPs here as needed
   end
 }
+
+

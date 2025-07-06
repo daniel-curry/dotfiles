@@ -11,7 +11,9 @@ map("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" }) -- Sp
 map("i", "jk", "<Esc>", { noremap = true })
 vim.o.timeoutlen = 300  -- or 200 ms
 
--- Faster entry into window mode
-map("n", "<leader>w", "<C-w>", { noremap = true })
+map("n", "ww", ":w<CR>", { noremap = true })
 
+
+map("n", "zz", ":wq<CR>", { noremap = true })
+map("n", "zx", ":q!<CR>", { noremap = true })
 
