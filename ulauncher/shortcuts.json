@@ -28,15 +28,5 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1751307219.709776
-    },
-    "3b5e517d-ff23-4287-a550-dd1fa4984ed7": {
-        "id": "3b5e517d-ff23-4287-a550-dd1fa4984ed7",
-        "name": "ChatGPT",
-        "keyword": "gpt",
-        "cmd": "#!/bin/bash\n\n# Combine all arguments into one search string\nquery=\"$*\"\n\n# URL-encode the query\nencoded_query=$(printf '%s' \"$query\" | jq -s -R -r @uri)\n\n# Construct ChatGPT search URL\nurl=\"https://chatgpt.com/?q=$encoded_query\"\n\n# Open in Brave\nbrave \"$url\" &",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": false,
-        "added": 1751307587.7293682
     }
 }
