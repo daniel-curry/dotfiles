@@ -51,3 +51,5 @@ setopt HIST_IGNORE_ALL_DUPS    # Remove older duplicates, keep latest
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+export MANPAGER='nvim +Man!'
