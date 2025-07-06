@@ -5,7 +5,7 @@
     "modules-right": ["custom/keyboard", "network", "battery","pulseaudio", "custom/power", "custom/notification"],
     "modules-center": ["clock"],
     "clock": {
-        "format": "{:%I:%M %p   -   %B %d, %Y}",
+        "format": "{:%I:%M %p   -   %A,  %B %d}",
         "tooltip": false
     }, 
     "network": {
