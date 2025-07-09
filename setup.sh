@@ -19,6 +19,10 @@ elif [[ "$user_confirmation" == "y" || "$user_confirmation" == "Y" ]]; then
     for value in "${directories[@]}"; do
         rm -rf "$HOME/.config/$value"
         ln -s "$HOME/dotfiles/$value" "$HOME/.config/$value"
+        if [ "$value" = "zsh" ]; then
+            rm "$HOME/.zshrc"
+            ln -s "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+        fi
     done
 else
     echo "Invalid input. Please try again."
