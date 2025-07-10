@@ -14,6 +14,8 @@ alias fuck='sudo $(fc -ln -1)'
 alias q='exit'
 alias airplay='uxplay -p 35000 -fps 60'
 
+bindkey '^H' backward-kill-word
+
 ## Git Aliases 
 alias gs='git status'
 alias gc='git commit'
