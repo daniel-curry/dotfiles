@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "modules-left": ["custom/spotify"],
-    "modules-right": ["custom/keyboard", "network", "battery","pulseaudio", "custom/power", "custom/notification"],
+    "modules-right": ["custom/workspaces", "network", "battery","pulseaudio", "custom/power", "custom/notification"],
     "modules-center": ["clock"],
     "clock": {
         "format": "{:%I:%M %p   -   %A,  %B %d}",
@@ -10,7 +10,7 @@
     }, 
     "network": {
         "format": "{ifname}",
-        "format-wifi": " ", //{essid}",
+        "format-wifi": " ",//{essid}",
         "format-ethernet": " {ifname}",
         "format-disconnected": "",
         "tooltip-format-wifi": "{signalStrength}%",
@@ -40,5 +40,12 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
+    },
+    "custom/workspaces": {
+        "exec": "~/.config/waybar/workspace_clients.sh",
+        "interval": 1,
+        "return-type": "json",
+        "tooltip": false
+
     }
 }
