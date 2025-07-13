@@ -29,6 +29,7 @@ elif [[ "$user_confirmation" == "y" || "$user_confirmation" == "Y" ]]; then
             sudo rm -rf "/etc/keyd"
             sudo mkdir -p "/etc/keyd/"
             sudo ln -s "$HOME/dotfiles/keyd/default.conf" "/etc/keyd/default.conf"
+            sudo keyd reload
         fi
     done
 else
