@@ -17,3 +17,4 @@ map("n", "ww", ":w<CR>", { noremap = true })
 map("n", "zz", ":wq<CR>", { noremap = true })
 map("n", "zx", ":q!<CR>", { noremap = true })
 
+map("n", "<leader>a", ":%y+<CR>", { noremap = true })
