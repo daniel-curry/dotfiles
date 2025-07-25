@@ -43,8 +43,9 @@
     },
     "custom/workspaces": {
         "exec": "~/.config/waybar/workspace_clients.sh",
-        "interval": 1,
         "return-type": "json",
+        "interval": 0,
+        "reload-signal": 12,
         "tooltip": false
 
     }
