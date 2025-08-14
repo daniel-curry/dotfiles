@@ -1,2 +1,3 @@
 *.log
 local_config.conf
+btop.conf
