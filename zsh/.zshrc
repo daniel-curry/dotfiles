@@ -45,3 +45,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Makes nvim default application for man pages
 export MANPAGER='nvim +Man!'
+
+# Always opens tmux unless already in a tmux session
+if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
+    tmux attach -t main || tmux new -s main
+fi
