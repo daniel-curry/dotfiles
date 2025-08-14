@@ -33,7 +33,7 @@ elif [[ "$user_confirmation" == "y" || "$user_confirmation" == "Y" ]]; then
             sudo keyd reload
         fi
 
-        if [ "$value" = "tmux"]; then
+        if [ "$value" = "tmux" ]; then
             rm "$HOME/.tmux.conf"
             sudo ln -s "$HOME/dotfiles/tmux/.tmux.conf" "$HOME/.tmux.conf"
         fi
