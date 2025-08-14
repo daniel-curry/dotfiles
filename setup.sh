@@ -23,6 +23,7 @@ elif [[ "$user_confirmation" == "y" || "$user_confirmation" == "Y" ]]; then
         if [ "$value" = "zsh" ]; then
             rm "$HOME/.zshrc"
             ln -s "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+            ln -s "$HOME/dotfiles/zsh/.zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
         fi
 
         if [ "$value" = "keyd" ]; then
