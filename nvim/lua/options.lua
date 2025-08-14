@@ -9,4 +9,5 @@ opt.smartindent = true
 opt.clipboard = "unnamedplus"
 opt.termguicolors = true
 opt.cursorline = true
-
+opt.ignorecase = true
+opt.smartcase = true
