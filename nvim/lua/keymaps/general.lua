@@ -11,10 +11,12 @@ map("n", "<leader>t", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" }) -- Sp
 map("i", "jk", "<Esc>", { noremap = true })
 vim.o.timeoutlen = 300  -- or 200 ms
 
-map("n", "ww", ":w<CR>", { noremap = true })
+map("n", "wr", ":w<CR>", { noremap = true })
 
 
 map("n", "zz", ":wq<CR>", { noremap = true })
 map("n", "zx", ":q!<CR>", { noremap = true })
 
 map("n", "<leader>a", ":%y+<CR>", { noremap = true })
+
+map("n", "<Esc>", ":nohlsearch<Esc>", { noremap = true })
