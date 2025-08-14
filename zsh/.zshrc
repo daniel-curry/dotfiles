@@ -10,9 +10,11 @@ PROMPT='%B%F{cyan}%n%f %F{blue}%~%b%f $ '
 
 # Aliases
 alias update='sudo pacman -Syu && yay -Syu'
-alias fuck='sudo $(fc -ln -1)'
+alias redo='sudo $(fc -ln -1)'
 alias q='exit'
+alias ls='ls -lah'
 alias airplay='uxplay -p 35000 -fps 60'
+alias g='rg'
 
 bindkey '^H' backward-kill-word
 
