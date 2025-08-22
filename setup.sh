@@ -22,6 +22,7 @@ elif [[ "$user_confirmation" == "y" || "$user_confirmation" == "Y" ]]; then
         ln -s "$HOME/dotfiles/$value" "$HOME/.config/$value"
         if [ "$value" = "zsh" ]; then
             rm "$HOME/.zshrc"
+            rm "$HOME/.zsh_plugins.txt"
             ln -s "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
             ln -s "$HOME/dotfiles/zsh/.zsh_plugins.txt" "$HOME/.zsh_plugins.txt"
         fi
