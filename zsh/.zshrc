@@ -50,3 +50,4 @@ export MANPAGER='nvim +Man!'
 if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
     tmux attach -t main || tmux new -s main
 fi
+eval "$(zoxide init zsh)"
