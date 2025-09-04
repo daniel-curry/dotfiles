@@ -16,5 +16,6 @@ return {
 
     vim.g.copilot_no_tab_map = true    -- prevent default <Tab> mapping
     vim.g.copilot_assume_mapped = true -- allows custom mapping like above
+    vim.g.copilot_enabled = false -- disable Copilot by default
   end,
 }
