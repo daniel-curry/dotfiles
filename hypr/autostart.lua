@@ -8,11 +8,12 @@ hl.on("hyprland.start", function()
         "pkill mako; swaync",
         "swayidle -w timeout 1200 hyprlock",
         "~/dotfiles/waybar/hypr_listener.sh &",
-        "spotify", {workspace = "special:magic silent"}
     }
 
     for _, a in ipairs(startup_apps) do
         hl.exec_cmd(a)
     end
+
+    hl.exec_cmd("spotify", {workspace = "special:magic silent"})
 
 end)
