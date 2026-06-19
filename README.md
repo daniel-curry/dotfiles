@@ -17,11 +17,11 @@ cd ~/dotfiles
 
 ### Window Manager & Compositor
 - **[Hyprland](hypr/)** - Modern Wayland compositor
-  - `hyprland.conf` - Main configuration
+  - `hyprland.lua` - Main configuration
   - `hypridle.conf` - Idle daemon settings
   - `hyprlock.conf` - Screen locker configuration
   - `hyprpaper.conf` - Wallpaper daemon
-  - `local_config.conf` - Machine-specific overrides
+  - `local_config.lua` - Machine-specific overrides
 
 ### Status Bar & Launcher
 - **[Waybar](waybar/)** - Highly customizable status bar for Wayland

@@ -51,3 +51,5 @@ if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then
     tmux attach -t main || tmux new -s main
 fi
 eval "$(zoxide init zsh)"
+
+export PATH="$HOME/dev/flutter/bin:$PATH"

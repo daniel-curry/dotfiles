@@ -23,7 +23,7 @@ sensitivity = 90
 # The number of bars (0-512). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
 ; bars = 100
-bar_width = 2
+bar_width = 1
 bar_spacing = 0
 # bar_height is only used for output in "noritake" format
 ; bar_height = 32
@@ -264,7 +264,7 @@ gradient_color_5 = '#D53302'
 # Noise reduction, int 0 - 100. default 77
 # the raw visualization is very noisy, this factor adjusts the integral and gravity filters to keep the signal smooth
 # 100 will be very slow and smooth, 0 will be fast but noisy.
-noise_reduction = 70
+noise_reduction = 60
 
 
 [eq]
