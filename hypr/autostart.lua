@@ -7,7 +7,7 @@ hl.on("hyprland.start", function()
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE",
         "pkill mako; swaync",
         "swayidle -w timeout 1200 hyprlock",
-        "~/dotfiles/waybar/hypr_listener.sh &",
+        "quickshell",
     }
 
     for _, a in ipairs(startup_apps) do
