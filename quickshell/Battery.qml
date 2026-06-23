@@ -10,7 +10,7 @@ RowLayout {
     visible: device !== null && device.isLaptopBattery
 
     Text {
-        text: device ? Math.round(device.percentage) + "%" : ""
+        text: device ? Math.round(device.percentage * 100) + "%" : ""
         color: Theme.foreground
         font.family: Theme.fontFamily
         font.pixelSize: Theme.fontSize
