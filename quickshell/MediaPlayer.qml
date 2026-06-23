@@ -13,13 +13,6 @@ RowLayout {
     }
 
     Text {
-        text: "\uf001"
-        color: Theme.foreground
-        font.family: Theme.iconFontFamily
-        font.pixelSize: Theme.fontSize
-    }
-
-    Text {
         Layout.maximumWidth: 480
         elide: Text.ElideRight
         text: root.activePlayer ? root.activePlayer.trackArtist + " - " + root.activePlayer.trackTitle : ""

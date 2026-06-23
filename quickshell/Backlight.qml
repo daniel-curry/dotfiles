@@ -1,15 +1,12 @@
 import QtQuick
 import Quickshell.Io
 
-Text {
+// No bar presence; brightness is controlled via keyboard keys. This only
+// polls the current level and drives the OSD popup when it changes.
+Item {
     id: root
     property int percent: 0
     property bool ready: false
-
-    text: ""
-    color: Theme.foreground
-    font.family: Theme.iconFontFamily
-    font.pixelSize: Theme.fontSize
 
     function refresh() {
         getProc.running = true;
@@ -31,11 +28,6 @@ Text {
         }
     }
 
-    Process {
-        id: setProc
-        onExited: root.refresh()
-    }
-
     Timer {
         interval: 5000
         running: true
@@ -49,15 +41,5 @@ Text {
         interval: 800
         running: true
         onTriggered: root.ready = true
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onWheel: (event) => {
-            setProc.command = event.angleDelta.y > 0
-                ? ["brightnessctl", "s", "+10%", "--min-value=5"]
-                : ["brightnessctl", "s", "10%-", "--min-value=5"];
-            setProc.running = true;
-        }
     }
 }
