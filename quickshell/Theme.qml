@@ -4,7 +4,7 @@ import QtQuick
 QtObject {
     readonly property color background: "#000000"
     readonly property color foreground: "#ffffff"
-    readonly property color accent: "#c9545d"
+    readonly property color accent: "#d9d9d9"
     readonly property color disconnected: "#f53c3c"
     readonly property color charging: "#7ec96a"
     readonly property color osdBackground: "#101010"

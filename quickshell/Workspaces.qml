@@ -172,10 +172,12 @@ Item {
                     Repeater {
                         model: wsItem.appClasses
 
-                        ClippingRectangle {
+                        // Plain Item rather than ClippingRectangle: the software
+                        // renderer can't do rounded-rect masking and would clip the
+                        // icon away entirely. Icons are already transparent PNGs, so
+                        // the 4px corner rounding wasn't visible at this size anyway.
+                        Item {
                             required property string modelData
-                            color: "transparent"
-                            radius: 4
                             implicitWidth: root.iconSize
                             implicitHeight: root.iconSize
                             Layout.alignment: Qt.AlignVCenter
