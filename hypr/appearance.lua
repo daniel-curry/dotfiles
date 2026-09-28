@@ -1,5 +1,9 @@
 hl.config({
 
+    cursor = {
+        inactive_timeout = 3,
+    },
+
     general = { 
         gaps_in = 0,
         gaps_out = 0,
