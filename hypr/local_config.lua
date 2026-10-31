@@ -36,6 +36,7 @@ M.mainMod
 M.touchpad
 M.internal (internal laptop display)
 M.external (external monitor)
+M.is_laptop (bool; determines whether to include laptop-specific options)
 
 monitors follow:
 hl.monitor({
