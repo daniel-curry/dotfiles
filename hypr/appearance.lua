@@ -25,7 +25,7 @@ hl.config({
         blur = { enabled = false }
     },
 
-    animations = { enabled = true },
+    animations = { enabled = false },
     dwindle = { preserve_split = true },
 
     misc = {
