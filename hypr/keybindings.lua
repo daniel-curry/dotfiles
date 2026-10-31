@@ -1,5 +1,6 @@
-local mainMod = "ALT"
-local browser = "uwsm app -- zen-browser -new-window"
+local local_config = require("local_config")
+
+local browser = "uwsm app -- brave-origin -new-window"
 local exec = hl.dsp.exec_cmd
 
 local touchpad_enabled = true
@@ -12,6 +13,7 @@ local function toggle_touchpad()
     })
 end
 
+local mainMod = local_config.mainMod
 local mainMod_keybindings = {
     -- Programs
     { "RETURN",      exec("kitty") },
