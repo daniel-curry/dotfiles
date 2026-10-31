@@ -1,5 +1,5 @@
-hl.env("ELECTON_OZONE_PLATFORM_HINT","wayland")
-hl.env("GTK_MODULES", "gail:akt-bridge")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
+hl.env("GTK_MODULES", "gail:atk-bridge")
 hl.env("QT_ACCESSIBILITY", 1)
 local local_config = require("local_config")
 require("autostart")
