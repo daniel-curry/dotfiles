@@ -2,6 +2,16 @@ local mainMod = "ALT"
 local browser = "uwsm app -- zen-browser -new-window"
 local exec = hl.dsp.exec_cmd
 
+local touchpad_enabled = true
+local function toggle_touchpad()
+    touchpad_enabled = not touchpad_enabled
+    hl.device({ name = local_config.touchpad, enabled = touchpad_enabled })
+    hl.notification.create({
+        text = "Touchpad " .. (touchpad_enabled and "enabled" or "disabled"),
+        timeout = 2000,
+    })
+end
+
 local mainMod_keybindings = {
     -- Programs
     { "RETURN",      exec("kitty") },
@@ -9,6 +19,9 @@ local mainMod_keybindings = {
     { "SPACE",       exec("~/.cargo/bin/scout") },
     { "ESCAPE",      exec("hyprlock") },
     { "PRINT",       exec('grim -g "$(slurp)" - | wl-copy') },
+    -- Pressing again while the overlay is open closes it, so overlays can't stack.
+    { "semicolon",   exec("pkill -x wl-kbptr || wl-kbptr -o modes=floating,click -o mode_floating.source=detect") },
+    { "SHIFT + semicolon", exec("pkill -x wl-kbptr || wl-kbptr -o modes=floating,click -o mode_floating.source=detect -o mode_click.button=right") },
     -- Web apps
     { "I",           exec(browser .. "=https://claude.ai") },
     { "T",           exec(browser .. "=https://app.todoist.com") },
@@ -18,6 +31,7 @@ local mainMod_keybindings = {
     { "V",           hl.dsp.window.float({ action = "toggle" }) },
     { "F",           hl.dsp.window.fullscreen({ action = "toggle" }) },
     { "SHIFT + N",   exec("swaync-client -t") },
+    { "SHIFT + T",   toggle_touchpad },
     { "R",           hl.dsp.submap("resize") },
     -- Focus
     { "H",           hl.dsp.focus({ direction = "left" }) },
