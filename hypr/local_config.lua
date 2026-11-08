@@ -20,8 +20,10 @@
 -- }
 -- ==============================
 
-for _, gesture in ipairs(gesture_rules) do
-    hl.gesture(gesture)
+if gesture_rules then
+    for _, gesture in ipairs(gesture_rules) do
+        hl.gesture(gesture)
+    end
 end
 
 if local_config_options then
